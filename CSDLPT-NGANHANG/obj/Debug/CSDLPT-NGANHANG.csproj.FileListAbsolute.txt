@@ -33,3 +33,16 @@ D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\obj\Debug\CSDLPT-NGANHANG.pdb
 D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\obj\Debug\CSDLPT_NGANHANG.frmMain.resources
 D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\obj\Debug\CSDLPT_NGANHANG.frmDangNhap.resources
 D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\obj\Debug\CSDLPT_NGANHANG.frmMain1.resources
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\obj\Debug\CSDLPT_NGANHANG.frmNV.resources
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.XtraGrid.v23.2.dll
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.XtraLayout.v23.2.dll
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.XtraPrinting.v23.2.dll
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.RichEdit.v23.2.Core.dll
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.XtraTreeList.v23.2.dll
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.Office.v23.2.Core.dll
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.XtraGrid.v23.2.xml
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.XtraLayout.v23.2.xml
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.XtraPrinting.v23.2.xml
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.RichEdit.v23.2.Core.xml
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.XtraTreeList.v23.2.xml
+D:\Project\CSDLPT-NGANHANG\CSDLPT-NGANHANG\bin\Debug\DevExpress.Office.v23.2.Core.xml

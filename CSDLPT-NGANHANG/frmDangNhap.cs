@@ -100,8 +100,8 @@ namespace CSDLPT_NGANHANG
             //Program.frmChinh.NHOM.Text = "NHÓM: " + Program.mGroup;
             //Program.frmChinh.HienThiMenu();
             this.Visible = false;
-            Program.frmChinh.btnDangXuat.Enabled = true;
-            Program.frmChinh.btnDangNhap.Enabled = false;
+            Program.frmChinh.btn_DangXuat.Enabled = true;
+            Program.frmChinh.btn_DangNhap.Enabled = false;
 
         }
 

@@ -50,7 +50,7 @@ namespace CSDLPT_NGANHANG
         public static string tenChiNhanh = "";
 
         public static BindingSource bds_dspm = new BindingSource();  // giữ bdsPM khi đăng nhập
-        public static frmMain1 frmChinh;
+        public static frmMain frmChinh;
 
         public static int KetNoi()
         {
@@ -133,7 +133,7 @@ namespace CSDLPT_NGANHANG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmChinh = new frmMain1();
+            frmChinh = new frmMain();
             Application.Run(frmChinh);
         }
     }
