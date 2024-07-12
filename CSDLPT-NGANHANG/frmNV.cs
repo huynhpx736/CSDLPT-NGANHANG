@@ -24,8 +24,9 @@ namespace CSDLPT_NGANHANG
 
         private void frmNV_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dS.KH' table. You can move, or remove it, as needed.
-            this.kHTableAdapter.Fill(this.dS.KH);
+            // TODO: This line of code loads data into the 'dS.ChiNhanh' table. You can move, or remove it, as needed.
+            this.chiNhanhTableAdapter.Fill(this.dS.ChiNhanh);
+
             // TODO: This line of code loads data into the 'dS.GD_CHUYENTIEN' table. You can move, or remove it, as needed.
             this.gD_CHUYENTIENTableAdapter.Fill(this.dS.GD_CHUYENTIEN);
             // TODO: This line of code loads data into the 'dS.NhanVien' table. You can move, or remove it, as needed.

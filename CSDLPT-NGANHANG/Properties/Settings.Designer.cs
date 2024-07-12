@@ -33,5 +33,16 @@ namespace CSDLPT_NGANHANG.Properties {
                 return ((string)(this["NGANHANGConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-R0D53ER\\SERVER1;Initial Catalog=NGANHANG;User ID=sa;Password=" +
+            "070736;Encrypt=False")]
+        public string NGANHANGConnectionString1 {
+            get {
+                return ((string)(this["NGANHANGConnectionString1"]));
+            }
+        }
     }
 }

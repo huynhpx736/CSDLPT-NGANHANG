@@ -56,15 +56,20 @@
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.gD_CHUYENTIENTableAdapter = new CSDLPT_NGANHANG.DSTableAdapters.GD_CHUYENTIENTableAdapter();
-            this.kHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kHTableAdapter = new CSDLPT_NGANHANG.DSTableAdapters.KHTableAdapter();
+            this.chiNhanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chiNhanhTableAdapter = new CSDLPT_NGANHANG.DSTableAdapters.ChiNhanhTableAdapter();
+            this.tableAdapterManager = new CSDLPT_NGANHANG.DSTableAdapters.TableAdapterManager();
+            this.chiNhanhGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiNhanhGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -92,8 +97,8 @@
             this.bar1.DockRow = 1;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.Text = "Tools";
             // 
             // barButtonItem1
@@ -108,6 +113,7 @@
             // 
             this.barButtonItem2.Caption = "Xóa";
             this.barButtonItem2.Id = 1;
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
             // bar2
@@ -144,7 +150,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 645);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 775);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1346, 20);
             // 
@@ -154,7 +160,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 51);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 594);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 724);
             // 
             // barDockControlRight
             // 
@@ -162,7 +168,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1346, 51);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 594);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 724);
             // 
             // dS
             // 
@@ -185,7 +191,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(864, 330);
+            this.gridControl1.Size = new System.Drawing.Size(954, 330);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -300,20 +306,49 @@
             // 
             this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
             // 
-            // kHBindingSource
+            // chiNhanhBindingSource
             // 
-            this.kHBindingSource.DataMember = "KH";
-            this.kHBindingSource.DataSource = this.dS;
+            this.chiNhanhBindingSource.DataMember = "ChiNhanh";
+            this.chiNhanhBindingSource.DataSource = this.dS;
             // 
-            // kHTableAdapter
+            // chiNhanhTableAdapter
             // 
-            this.kHTableAdapter.ClearBeforeFill = true;
+            this.chiNhanhTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChiNhanhTableAdapter = this.chiNhanhTableAdapter;
+            this.tableAdapterManager.GD_CHUYENTIENTableAdapter = this.gD_CHUYENTIENTableAdapter;
+            this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
+            this.tableAdapterManager.KhachHangTableAdapter = null;
+            this.tableAdapterManager.NhanVienTableAdapter = this.nhanVienTableAdapter;
+            this.tableAdapterManager.TaiKhoanTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = CSDLPT_NGANHANG.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // chiNhanhGridControl
+            // 
+            this.chiNhanhGridControl.DataSource = this.chiNhanhBindingSource;
+            this.chiNhanhGridControl.Location = new System.Drawing.Point(125, 477);
+            this.chiNhanhGridControl.MainView = this.gridView2;
+            this.chiNhanhGridControl.MenuManager = this.barManager1;
+            this.chiNhanhGridControl.Name = "chiNhanhGridControl";
+            this.chiNhanhGridControl.Size = new System.Drawing.Size(823, 292);
+            this.chiNhanhGridControl.TabIndex = 10;
+            this.chiNhanhGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.chiNhanhGridControl;
+            this.gridView2.Name = "gridView2";
             // 
             // frmNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1346, 665);
+            this.ClientSize = new System.Drawing.Size(1346, 795);
+            this.Controls.Add(this.chiNhanhGridControl);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -329,7 +364,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiNhanhGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,7 +400,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
         private DSTableAdapters.GD_CHUYENTIENTableAdapter gD_CHUYENTIENTableAdapter;
-        private System.Windows.Forms.BindingSource kHBindingSource;
-        private DSTableAdapters.KHTableAdapter kHTableAdapter;
+        private System.Windows.Forms.BindingSource chiNhanhBindingSource;
+        private DSTableAdapters.ChiNhanhTableAdapter chiNhanhTableAdapter;
+        private DSTableAdapters.TableAdapterManager tableAdapterManager;
+        private DevExpress.XtraGrid.GridControl chiNhanhGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }
