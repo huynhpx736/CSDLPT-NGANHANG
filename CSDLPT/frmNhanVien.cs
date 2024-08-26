@@ -35,6 +35,8 @@ namespace CSDLPT
             this.GoiRutTableAdapter.Connection.ConnectionString = Program.connstr;
             this.GoiRutTableAdapter.Fill(this.DS.GD_GOIRUT);
 
+            //loi khi khong co nhan vien hoac khach hang
+            // macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
             macn = Program.tenChiNhanh;
 
             ///
@@ -75,6 +77,35 @@ namespace CSDLPT
             vitri = bdsNV.Position;
             bdsNV.AddNew();
             textMaCN.Text = macn;
+            //int ma = 0;
+            //try
+            //{
+            //    string strlenh1 = "SELECT MaNV = ISNULL(MAX(CAST(SUBSTRING(MANV, 3, LEN(MANV) - 2) AS INT)), 0) FROM NhanVien";
+
+            //    Program.myReader = Program.ExecSqlDataReader(strlenh1);
+
+            //    if (Program.myReader != null && Program.myReader.HasRows)
+            //    {
+            //        Program.myReader.Read();
+            //        ma = Program.myReader.GetInt32(0) + 2;
+            //    }
+            //    if (ma < 10)
+            //    {
+            //        textMaNV.Text = "NV" + '0' + ma.ToString();
+            //    }
+            //    else
+            //    {
+            //        textMaNV.Text = "NV" + ma.ToString();
+            //    }
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //finally
+            //{
+            //    Program.conn.Close();
+            //}
 
             btn_Them.Enabled = btn_Sua.Enabled = btn_Xoa.Enabled = btn_Refresh.Enabled = btn_Thoat.Enabled  = false;
             btn_Ghi.Enabled = btn_PhucHoi.Enabled = true;
@@ -281,34 +312,26 @@ namespace CSDLPT
             {
                 string strlenh2 = "EXEC KtraTrungMANV '" + textMaNV.Text.TrimEnd() + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh2);
-                if (Program.myReader == null) return false;
+                if (Program.myReader == null)
                 {
-                    if (Program.myReader.HasRows)
-                    {
-                        Program.myReader.Read();
-                        MessageBox.Show("Mã nhân viên đã tồn tại \nVui lòng nhập lại", "", MessageBoxButtons.OK);
-                        Program.myReader.Close();
-                        return false;
-                    }
+                    Program.myReader.Read();
+                    MessageBox.Show("Mã nhân viên đã tồn tại \nVui lòng nhập lại", "", MessageBoxButtons.OK);
                     Program.myReader.Close();
+                    return false;
                 }
+                Program.myReader.Close();
 
                 string strlenh1 = "EXEC KtraTrungCMND '" + textCMND.Text.TrimEnd() + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 if (Program.myReader == null) return false;
+                Program.myReader.Read();
+                if (Program.myReader.HasRows)
                 {
-                    if (Program.myReader.HasRows)
-                    {
-                        Program.myReader.Read();
-                        MessageBox.Show("CMND đã tồn tại \nVui lòng nhập lại", "", MessageBoxButtons.OK);
-                        Program.myReader.Close();
-                        return false;
-                    }
+                    MessageBox.Show("CMND đã tồn tại \nVui lòng nhập lại", "", MessageBoxButtons.OK);
                     Program.myReader.Close();
+                    return false;
                 }
-
-                return true;
-
+                Program.myReader.Close();
             }
             if (btn_Them_clicked == false && textCMND.Text != ((DataRowView)bdsNV[bdsNV.Position])["CMND"].ToString())
             {

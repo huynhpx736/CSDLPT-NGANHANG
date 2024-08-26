@@ -172,7 +172,7 @@
             // 
             this.btn_NhanVien.Caption = "Nhân viên";
             this.btn_NhanVien.Id = 11;
-            this.btn_NhanVien.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_NhanVien.ImageOptions.SvgImage")));
+            this.btn_NhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_NhanVien.ImageOptions.LargeImage")));
             this.btn_NhanVien.LargeWidth = 100;
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NhanVien_ItemClick);

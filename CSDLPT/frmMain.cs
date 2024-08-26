@@ -144,10 +144,11 @@ namespace CSDLPT
 
         private void btnGoiRut_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = CheckExists(typeof(frm_GuiRut));
+            Form frm = CheckExists(typeof(frmGoiRut));
             if (frm != null) frm.Activate();
             else
             {
+                //frmGoiRut f = new frmGoiRut();
                 frm_GuiRut f = new frm_GuiRut();
                 f.MdiParent = this;
                 f.Show();
@@ -156,10 +157,11 @@ namespace CSDLPT
 
         private void btnChuyenTien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = CheckExists(typeof(frm_ChuyenTien));
+            Form frm = CheckExists(typeof(frmChuyenTien));
             if (frm != null) frm.Activate();
             else
             {
+                //frmChuyenTien f = new frmChuyenTien();
                 frm_ChuyenTien f = new frm_ChuyenTien();
                 f.MdiParent = this;
                 f.Show();

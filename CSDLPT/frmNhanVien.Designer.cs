@@ -510,7 +510,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ChiNhanhTableAdapter = null;
-            //this.tableAdapterManager.frmGoiRut_KhachHangTableAdapter = null;
+            this.tableAdapterManager.frmGoiRut_KhachHangTableAdapter = null;
             this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
             this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
             this.tableAdapterManager.KhachHangTableAdapter = null;

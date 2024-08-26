@@ -173,6 +173,8 @@ D:\CSDLPT_NGANHANG\CSDLPT\bin\Debug\DevExpress.XtraPivotGrid.v23.2.xml
 D:\CSDLPT_NGANHANG\CSDLPT\bin\Debug\DevExpress.XtraDiagram.v23.2.xml
 D:\CSDLPT_NGANHANG\CSDLPT\bin\Debug\DevExpress.Diagram.v23.2.Core.xml
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.csproj.AssemblyReference.cache
+D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.frmChuyenTien.resources
+D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.frmGoiRut.resources
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.frmKhachHang.resources
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.frmLietKeKH.resources
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.frmLietKeTK.resources
@@ -185,6 +187,9 @@ D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.frmTaoLogin.resources
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.frmTaoLoginKH.resources
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.Properties.Resources.resources
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.frmTaoTKKH.resources
+D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.XRPLietKeKH.resources
+D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.XRPLietKeTK.resources
+D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.XRPSaoKeGD.resources
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.csproj.GenerateResource.cache
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.exe.licenses
 D:\CSDLPT_NGANHANG\CSDLPT\obj\Debug\CSDLPT.csproj.CoreCompileInputs.cache
