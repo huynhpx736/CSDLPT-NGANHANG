@@ -158,6 +158,24 @@
     <Compile Include="frmTaoTKKH.Designer.cs">
       <DependentUpon>frmTaoTKKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRPLietKeKH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRPLietKeKH.Designer.cs">
+      <DependentUpon>XRPLietKeKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRPLietKeTK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRPLietKeTK.Designer.cs">
+      <DependentUpon>XRPLietKeTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRPSaoKeGD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRPSaoKeGD.Designer.cs">
+      <DependentUpon>XRPSaoKeGD.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +224,15 @@
     </Compile>
     <EmbeddedResource Include="frmTaoTKKH.resx">
       <DependentUpon>frmTaoTKKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRPLietKeKH.resx">
+      <DependentUpon>XRPLietKeKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRPLietKeTK.resx">
+      <DependentUpon>XRPLietKeTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRPSaoKeGD.resx">
+      <DependentUpon>XRPSaoKeGD.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="DS.xsc">

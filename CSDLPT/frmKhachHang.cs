@@ -35,6 +35,9 @@ namespace CSDLPT
 
             this.KhachHangTableAdapter.Connection.ConnectionString = Program.connstr;
             this.KhachHangTableAdapter.Fill(this.DS.KhachHang);
+
+            //loi khi khong co nhan vien hoac khach hang
+            //macn = ((DataRowView)bdsKH[0])["MACN"].ToString();
             macn = Program.tenChiNhanh;
 
             cmbChiNhanh.DataSource = Program.bds_dspm;
